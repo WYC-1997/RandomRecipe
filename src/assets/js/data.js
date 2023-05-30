@@ -36,7 +36,7 @@ export class DataServices {
             const len = savedData.length;
             const taken = new Set();
             if (num > len) {
-                throw new RangeError("getRandomItemsFromArray: more elements taken than available");
+                return []
             }
             while (result.length < num) {
                 const randomIndex = Math.floor(Math.random() * len);
