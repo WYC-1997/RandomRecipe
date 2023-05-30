@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <topVue />
+    <div class="app_body">
+      <leftVue />
+      <rightVue />
+    </div>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script> 
+import leftVue from './components/left.vue';
+import rightVue from './components/right.vue';
+import topVue from './components/top.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    leftVue,
+    rightVue,
+    topVue
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  /* height: 98vh; */
+  background-image: url("./assets/images/infinity-5967745.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center center;
+}
+.app_body {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
